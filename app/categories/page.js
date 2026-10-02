@@ -1,11 +1,16 @@
+import AllCategories from '@/components/categories/allCategories';
+import {getCategories} from '@/lib/api/products';
+
 import React from 'react'
 
-const CategoriesPage = () => {
+const CategoryPage = async() => {
+  const category = await getCategories()
+  console.log(category)
   return (
     <div>
-      make categories page similar to the products page 
+      <AllCategories category={category}/>
     </div>
   )
 }
 
-export default CategoriesPage
+export default CategoryPage

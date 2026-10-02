@@ -19,3 +19,4 @@ const AllProducts = ({ products }) => {
 };
 
 export default AllProducts;
+  

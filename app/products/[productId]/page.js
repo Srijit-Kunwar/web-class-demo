@@ -1,5 +1,5 @@
+import NotFound from "@/app/not-found";
 import { getProductById } from "@/lib/api/products";
-import { notFound } from "next/navigation";
 import React from "react";
 
 const ProductByID = async ({ params }) => {
@@ -9,10 +9,10 @@ const ProductByID = async ({ params }) => {
   try {
     product = await getProductById(productId);
   } catch {
-    notFound();
+    NotFound();
   }
   if (!product?.id) {
-    notFound();
+    NotFound();
   }
 
   return (
